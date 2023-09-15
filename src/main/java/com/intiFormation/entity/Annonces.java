@@ -15,6 +15,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
@@ -27,8 +28,10 @@ private String titreAnnonce;
 private String descriAnnonce;
 private String photoAnnonce;
 @Temporal(TemporalType.DATE)
+//@JsonFormat(pattern = "yyyy-MM-dd")
 private Date datePubli;
 @Temporal(TemporalType.DATE)
+//@JsonFormat(pattern = "yyyy-MM-dd")
 private Date dateExp;
 private boolean statut;
 

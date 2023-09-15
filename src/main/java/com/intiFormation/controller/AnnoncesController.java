@@ -9,6 +9,7 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -79,7 +80,8 @@ public class AnnoncesController {
 
 	@PostMapping("/public/annonce")
 	public void ajouterAnnonce(@RequestParam("titreAnnonce") String titreAnnonce, @RequestParam("descriAnnonce") String descriAnnonce, 
-			@RequestParam("datePubli") Date datePubli, @RequestParam("dateExp") Date dateExp,
+			@RequestParam("datePubli")@DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date datePubli, 
+			@RequestParam("dateExp")@DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date dateExp,
 			@RequestParam("catAnnonce") int idCat,
 			@RequestParam("annonceUser") int idUser, @RequestParam("fichier") MultipartFile file, HttpSession session) {
 		String path=session.getServletContext().getRealPath("/");  

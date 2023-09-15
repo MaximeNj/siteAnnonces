@@ -1,0 +1,10 @@
+com\intiFormation\entity\Utilisateurs.class
+com\intiFormation\dao\iCategorieDao.class
+com\intiFormation\entity\Annonces.class
+com\intiFormation\service\CategorieService.class
+com\intiFormation\SiteAnnoncesApplication.class
+com\intiFormation\entity\Role.class
+com\intiFormation\entity\Categorie.class
+com\intiFormation\service\iCategorieService.class
+com\intiFormation\entity\Commentaire.class
+com\intiFormation\controller\CategorieController.class
